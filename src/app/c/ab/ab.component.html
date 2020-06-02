@@ -1,0 +1,5 @@
+<section [formGroup]="formGroup">
+    <app-aroot [formControlName]="formControlNames.aba"></app-aroot>
+    <app-broot [formControlName]="formControlNames.abb"></app-broot>
+</section>
+<pre>{{formGroupValues | json}}</pre>
