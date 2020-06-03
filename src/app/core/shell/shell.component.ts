@@ -8,7 +8,7 @@ import { AbService } from 'src/app/ab.service';
 })
 export class ShellComponent  {
 
-  public ab$ = this.abservice.dataAB$
+  public ab$ = this.abservice.dataIAB$
   
   constructor(private abservice: AbService){}
  

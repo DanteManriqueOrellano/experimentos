@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { IAB } from './c/ab/ab.component';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { IA } from './a/aroot/aroot.component';
 
 
 @Injectable({
@@ -9,7 +10,8 @@ import { map } from 'rxjs/operators';
 })
 export class AbService {
 
-  public dataAB$:BehaviorSubject<IAB> = new BehaviorSubject(dataAB)
+  public dataIAB$:BehaviorSubject<IAB> = new BehaviorSubject(dataAB)
+  public dataIA$:BehaviorSubject<IA> = new BehaviorSubject(dataIA)
 
  
 }
@@ -36,3 +38,11 @@ export const dataAB:IAB=
   "d":{"d_uno":"tu vieja"}
 }
 
+export const dataIA:IA = {
+  "a1": {
+    "a_uno": "fast"
+  },
+  "a2": {
+    "a_dos": "foot"
+  }
+}

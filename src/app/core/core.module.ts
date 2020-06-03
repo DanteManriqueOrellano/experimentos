@@ -8,6 +8,7 @@ import { BModule } from '../b/b.module';
 import { CModule } from '../c/c.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DModule } from '../d/d.module';
+import { EModule } from '../e/e.module';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { DModule } from '../d/d.module';
     CModule,
     FormsModule,
     ReactiveFormsModule,
-    DModule
+    DModule,
+    EModule
   ],
   exports:[ShellComponent]
 })

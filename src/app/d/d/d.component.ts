@@ -11,13 +11,8 @@ export interface ID {
   styleUrls: ['./d.component.css'],
   providers:subformComponentProviders(DComponent)
 })
-export class DComponent extends NgxRootFormComponent<ID> {
-  @DataInput()
-  dataInput: Required<ID>;
-  dataOutput: EventEmitter<ID>;
-
+export class DComponent extends NgxSubFormComponent<ID> {
   
-
   protected getFormControls():Controls<ID>{
     return {
       d_uno: new FormControl()
