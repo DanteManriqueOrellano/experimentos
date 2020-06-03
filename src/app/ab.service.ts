@@ -32,6 +32,7 @@ export const dataAB:IAB=
     "b2": {
       "b_dos": "valor a_dos"
     }
-  }
+  },
+  "d":{"d_uno":"tu vieja"}
 }
 

@@ -3,10 +3,12 @@ import { NgxRootFormComponent, DataInput, Controls, subformComponentProviders } 
 import { IA } from '../../a/aroot/aroot.component';
 import { IB } from '../../b/broot/broot.component';
 import { FormControl } from '@angular/forms';
+import { ID } from 'src/app/d/d/d.component';
 
 export interface IAB{
   aba:IA;
   abb:IB;
+  d:ID
 }
 @Component({
   selector: 'app-ab',
@@ -23,6 +25,7 @@ export class AbComponent extends NgxRootFormComponent<IAB> {
     return {
       aba: new FormControl(),
       abb: new FormControl(),
+      d: new FormControl()
     }
   }
 

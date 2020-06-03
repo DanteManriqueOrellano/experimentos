@@ -7,6 +7,7 @@ import { AModule } from '../a/a.module';
 import { BModule } from '../b/b.module';
 import { CModule } from '../c/c.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DModule } from '../d/d.module';
 
 
 @NgModule({
@@ -14,11 +15,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     CoreRoutingModule,
-    AModule,
-    BModule,
+   
     CModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    DModule
   ],
   exports:[ShellComponent]
 })

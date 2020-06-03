@@ -5,16 +5,18 @@ import { ARoutingModule } from './a-routing.module';
 import { ADosComponent } from './a-dos/a-dos.component';
 import { AUnoComponent } from './a-uno/a-uno.component';
 import { ArootComponent } from './aroot/aroot.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [AUnoComponent,ADosComponent,ArootComponent],
   imports: [
     CommonModule,
     ARoutingModule,
-    AUnoComponent,
-    ADosComponent,
-    ArootComponent,
-  ]
+    
+    FormsModule,
+    ReactiveFormsModule
+  ],
+  exports:[AUnoComponent,ADosComponent,ArootComponent]
 })
 export class AModule { }
