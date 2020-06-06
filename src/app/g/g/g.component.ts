@@ -4,6 +4,9 @@ import { NgxRootFormComponent, Controls, subformComponentProviders, DataInput } 
 import { IG2 } from '../g-dos/g-dos.component';
 import { FormControl } from '@angular/forms';
 
+export interface IGPrincipal {
+  atributoPrincipal:string;
+}
 
 export interface IG{
   g1:IG1;

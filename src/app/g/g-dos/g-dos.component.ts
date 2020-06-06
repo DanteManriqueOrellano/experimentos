@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { NgxSubFormComponent, Controls, subformComponentProviders } from 'ngx-sub-form';
-
 import { FormControl } from '@angular/forms';
-export interface IG2  {
-  g_comun2: string
+import { IGPrincipal } from '../g/g.component';
+export interface IG2 extends IGPrincipal  {
+  
 }
 @Component({
   selector: 'app-g-dos',
@@ -15,7 +15,8 @@ export class GDosComponent extends NgxSubFormComponent<IG2> {
 
   protected getFormControls():Controls<IG2>{
     return {
-      g_comun2: new FormControl()
+      atributoPrincipal:new FormControl()
+      //g_comun2: new FormControl()
     }
 
   }
