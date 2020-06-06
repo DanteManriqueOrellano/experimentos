@@ -7,6 +7,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AModule } from '../a/a.module';
 import { BModule } from '../b/b.module';
 import { DModule } from '../d/d.module';
+import { FModule } from '../f/f.module';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { DModule } from '../d/d.module';
     DModule,
     FormsModule,
     ReactiveFormsModule,
+    FModule,
   ],
   exports:[AbComponent]
 })

@@ -3,6 +3,7 @@ import { IAB } from './c/ab/ab.component';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { IA } from './a/aroot/aroot.component';
+import { FType } from './f/f/f.component';
 
 
 @Injectable({
@@ -35,7 +36,9 @@ export const dataAB:IAB=
       "b_dos": "valor a_dos"
     }
   },
-  "d":{"d_uno":"tu vieja"}
+  "d":{"d_uno":"tu vieja"},
+  f:{fType:FType.DOS,f_comun:'miderda'}
+  
 }
 
 export const dataIA:IA = {

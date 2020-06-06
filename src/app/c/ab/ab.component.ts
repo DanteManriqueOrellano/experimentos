@@ -4,11 +4,14 @@ import { IA } from '../../a/aroot/aroot.component';
 import { IB } from '../../b/broot/broot.component';
 import { FormControl } from '@angular/forms';
 import { ID } from 'src/app/d/d/d.component';
+import { IF } from 'src/app/f/f/f.component';
 
 export interface IAB{
   aba:IA;
   abb:IB;
-  d:ID
+  d:ID;
+  f:IF;
+
 }
 @Component({
   selector: 'app-ab',
@@ -25,7 +28,8 @@ export class AbComponent extends NgxRootFormComponent<IAB> {
     return {
       aba: new FormControl(),
       abb: new FormControl(),
-      d: new FormControl()
+      d: new FormControl(),
+      f: new FormControl()
     }
   }
 
