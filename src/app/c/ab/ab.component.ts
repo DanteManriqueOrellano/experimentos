@@ -5,12 +5,14 @@ import { IB } from '../../b/broot/broot.component';
 import { FormControl } from '@angular/forms';
 import { ID } from 'src/app/d/d/d.component';
 import { IF } from 'src/app/f/f/f.component';
+import { IG } from 'src/app/g/g/g.component';
 
 export interface IAB{
   aba:IA;
   abb:IB;
   d:ID;
   f:IF;
+  g:IG;
 
 }
 @Component({
@@ -29,7 +31,8 @@ export class AbComponent extends NgxRootFormComponent<IAB> {
       aba: new FormControl(),
       abb: new FormControl(),
       d: new FormControl(),
-      f: new FormControl()
+      f: new FormControl(),
+      g: new FormControl(),
     }
   }
 

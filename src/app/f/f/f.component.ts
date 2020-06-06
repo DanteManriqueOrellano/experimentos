@@ -1,5 +1,5 @@
-import { Component,EventEmitter, ɵNOT_FOUND_CHECK_ONLY_ELEMENT_INJECTOR } from '@angular/core';
-import { NgxSubFormComponent, subformComponentProviders, Controls, NgxRootFormComponent, DataInput, NgxSubFormRemapComponent } from 'ngx-sub-form';
+import { Component,EventEmitter } from '@angular/core';
+import {  subformComponentProviders, Controls, NgxRootFormComponent, DataInput } from 'ngx-sub-form';
 import { FormControl } from '@angular/forms';
 import { IF_uno } from '../if-uno/if-uno.component';
 import { IF_dos } from '../if-dos/if-dos.component';

@@ -8,6 +8,7 @@ import { AModule } from '../a/a.module';
 import { BModule } from '../b/b.module';
 import { DModule } from '../d/d.module';
 import { FModule } from '../f/f.module';
+import { GModule } from '../g/g.module';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { FModule } from '../f/f.module';
     FormsModule,
     ReactiveFormsModule,
     FModule,
+    GModule,
   ],
   exports:[AbComponent]
 })
