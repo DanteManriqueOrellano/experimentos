@@ -1,0 +1,12 @@
+<fieldset [formGroup]="formGroup">
+    <legend>Centro Poblado</legend>
+    <mat-form-field>
+        <input matInput placeholder="Nombre Centro Poblado" [formControlName]='formControlNames.nombre_cp'  autocomplete="off">
+    </mat-form-field>
+    <div [formArrayName]="formControlNames.anexos" *ngFor="let unAnexo of formGroupControls.anexos.controls; let i= index">
+        <app-anexo-form [formControl]='unAnexo'></app-anexo-form>
+        <button mat-button color='warn' (click)='eliminarAnexo(i)'>Eliminar Anexo </button>
+
+    </div>
+    <button mat-button color='primary' (click)='agregarAnexo()'>Agregar Anexo </button>
+</fieldset>

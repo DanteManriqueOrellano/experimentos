@@ -1,0 +1,13 @@
+<div class="container-flex">
+    <div class="section-flex">
+
+        <ul *ngFor="let ubigeo of ubigeos;let i = index;">
+            <a [routerLink]="['ubigeos/misubigeos',ubigeo.id]" ><li> {{ubigeo.nombre_dep}}</li></a>  
+        </ul>
+
+    </div>
+    <div class="section-flex">
+       
+        <router-outlet></router-outlet>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+<fieldset [formGroup]="formGroup">
+    <legend>Provincia</legend>
+    <mat-form-field>
+        <input matInput placeholder="Nombre Provincia" [formControlName]='formControlNames.nombre_provincia' autocomplete="off">
+    </mat-form-field>
+
+    
+    <div [formArrayName]="formControlNames.distritos" *ngFor="let unDistrito of formGroupControls.distritos.controls; let i =index">
+        <app-distrito-form [formControl]='unDistrito'></app-distrito-form>
+        <button mat-button color ='warn' (click)='eliminarDistrito(i)'>Eliminar Distrito</button>
+
+    </div>
+    
+    <button mat-button color='primary' (click)='agregarDistrito()'>agregar Distrito</button>
+    
+</fieldset>

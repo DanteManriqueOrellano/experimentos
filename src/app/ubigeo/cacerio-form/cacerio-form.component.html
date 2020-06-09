@@ -1,0 +1,13 @@
+<fieldset [formGroup]="formGroup">
+    <legend>Cacerio</legend>
+    <mat-form-field>
+        <input matInput placeholder="Nombre Cacerio" [formControlName]="formControlNames.nombre_cacerio" autocomplete="off">
+    </mat-form-field>
+    <div [formArrayName]="formControlNames.cps" *ngFor="let unCps of formGroupControls.cps.controls; let i = index">
+    <app-cp-form [formControl]='unCps'></app-cp-form>
+    <button mat-button color='warn' (click)='eliminarCp(i)' >Eliminar Centro Poblado</button>
+
+    </div>
+    <button mat-button color='primary' (click)=' agregarCp()'>Agregar Centro Poblado</button>
+
+</fieldset>
