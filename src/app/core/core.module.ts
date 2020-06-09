@@ -9,13 +9,12 @@ import { CModule } from '../c/c.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DModule } from '../d/d.module';
 import { EModule } from '../e/e.module';
-
-
 @NgModule({
   declarations: [ShellComponent],
   imports: [
     CommonModule,
     CoreRoutingModule,
+ 
    
     CModule,
     FormsModule,
@@ -23,6 +22,7 @@ import { EModule } from '../e/e.module';
     DModule,
     EModule
   ],
+  
   exports:[ShellComponent]
 })
 export class CoreModule { }
