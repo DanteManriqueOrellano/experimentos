@@ -36,7 +36,7 @@ export const dataAB:IAB=
       "b_dos": "valor a_dos"
     }
   },
-  "d":{"d_uno":"tu vieja"},
+  "d":{"d_uno":'chupi'},
   f:{fType:FType.DOS,f_comun:'miderda'},
   g:{g1:{atributoPrincipal:'comun 1'},g2:{atributoPrincipal:"comun 2"}}
   

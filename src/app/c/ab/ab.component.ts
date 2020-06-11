@@ -7,12 +7,14 @@ import { ID } from 'src/app/d/d/d.component';
 import { IF } from 'src/app/f/f/f.component';
 import { IG } from 'src/app/g/g/g.component';
 
+
 export interface IAB{
   aba:IA;
   abb:IB;
   d:ID;
   f:IF;
   g:IG;
+  
 
 }
 @Component({
@@ -33,6 +35,7 @@ export class AbComponent extends NgxRootFormComponent<IAB> {
       d: new FormControl(),
       f: new FormControl(),
       g: new FormControl(),
+      
     }
   }
 

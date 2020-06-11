@@ -1,5 +1,12 @@
 <section [formGroup]="formGroup">
-    <input [formControlName]="formControlNames.d_uno">
+    <input [formControlName]='formControlNames.d_uno'>
+    
+   
 </section>
 
 <button [routerLink]="['/independiente']" >al independiente</button>
+
+
+<pre>{{formGroupValues | json}}</pre>
+
+
