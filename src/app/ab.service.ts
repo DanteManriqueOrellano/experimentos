@@ -38,7 +38,31 @@ export const dataAB:IAB=
   },
   "d":{"d_uno":'chupi'},
   f:{fType:FType.DOS,f_comun:'miderda'},
-  g:{g1:{atributoPrincipal:'comun 1'},g2:{atributoPrincipal:"comun 2"}}
+  g:{g1:{atributoPrincipal:'comun 1'},g2:{atributoPrincipal:"comun 2"}},
+  h:{h_uno:'hola',j:{j_uno:'un j'}},
+  departamemnto: {
+    nombre_departamento: 'ANCASH',
+    provincia: {
+      nombre_provincia: "HUARAZ",
+      distrito: {
+        nombre_distrito: "INDEPENDENCIA",
+        cacerios:[{
+          nombre_cacerio:"HUANCHAC",
+          centros_poblados:[
+            {nombre_centro_poblado:"MARIAN"},
+            {nombre_centro_poblado:"CURHUAS"}
+          ]
+        },{
+          nombre_cacerio:"CAURURU",
+          centros_poblados:[
+            {nombre_centro_poblado:"PONGOR"},
+            {nombre_centro_poblado:"PUMACAYAN"}
+          ]}
+        ]
+      }
+    }
+
+  }
   
   
 }

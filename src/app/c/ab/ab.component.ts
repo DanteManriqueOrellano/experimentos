@@ -6,6 +6,8 @@ import { FormControl } from '@angular/forms';
 import { ID } from 'src/app/d/d/d.component';
 import { IF } from 'src/app/f/f/f.component';
 import { IG } from 'src/app/g/g/g.component';
+import { IH } from 'src/app/h/h/h.component';
+import { IDepartamento } from 'src/app/ubigeo/editor/departamento/departamento.component';
 
 
 export interface IAB{
@@ -14,6 +16,8 @@ export interface IAB{
   d:ID;
   f:IF;
   g:IG;
+  h:IH;
+  departamemnto:IDepartamento
   
 
 }
@@ -35,9 +39,8 @@ export class AbComponent extends NgxRootFormComponent<IAB> {
       d: new FormControl(),
       f: new FormControl(),
       g: new FormControl(),
-      
+      h: new FormControl(),
+      departamemnto:new FormControl()
     }
   }
-
-
 }

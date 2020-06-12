@@ -9,6 +9,8 @@ import { BModule } from '../b/b.module';
 import { DModule } from '../d/d.module';
 import { FModule } from '../f/f.module';
 import { GModule } from '../g/g.module';
+import { HModule } from '../h/h.module';
+import { UbigeoModule } from '../ubigeo/ubigeo.module';
 
 
 
@@ -24,6 +26,8 @@ import { GModule } from '../g/g.module';
     ReactiveFormsModule,
     FModule,
     GModule,
+    HModule,
+    UbigeoModule
   ],
   exports:[AbComponent]
 })

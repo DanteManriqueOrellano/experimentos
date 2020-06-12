@@ -1,0 +1,12 @@
+<section [formGroup]="formGroup">
+    <fieldset>
+        <legend>CACERIOS</legend>
+        <input [formControlName]="formControlNames.nombre_cacerio">
+        <div [formArrayName]="formControlNames.centros_poblados" *ngFor="let unCentroPoblado of formGroupControls.centros_poblados.controls; let i = index">
+            <app-centro-poblado [formControl]="unCentroPoblado"></app-centro-poblado>
+            <button (click)="eliminarCentroPoblado(i)">Eliminar Centro Poblado</button>
+        </div>
+        <button (click)="agregarCentroPoblado()">Agregar Centro Poblado</button>
+    
+    </fieldset>
+</section>

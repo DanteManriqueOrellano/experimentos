@@ -20,7 +20,8 @@ import { EModule } from '../e/e.module';
     FormsModule,
     ReactiveFormsModule,
     DModule,
-    EModule
+    EModule,
+    
   ],
   
   exports:[ShellComponent]

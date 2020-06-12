@@ -1,0 +1,12 @@
+<section [formGroup]="formGroup">
+    <Fieldset>
+        <legend>DISTRITO</legend>
+        <input [formControlName]="formControlNames.nombre_distrito">
+        <div [formArrayName]="formControlNames.cacerios"
+            *ngFor="let unCacerio of formGroupControls.cacerios.controls; let i = index">
+            <app-cacerio [formControl]="unCacerio"></app-cacerio>
+            <button (click)="eliminarCacerio(i)">Eliminar Cacerio</button>
+        </div>
+        <button (click)="agregarCacerio()">Agregar Cacerio</button>
+    </Fieldset>
+</section>
