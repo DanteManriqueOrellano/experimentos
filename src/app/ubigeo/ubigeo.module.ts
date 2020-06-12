@@ -9,6 +9,7 @@ import { ProvinciaComponent } from './editor/provincia/provincia.component';
 import { DistritoComponent } from './editor/distrito/distrito.component';
 import { CacerioComponent } from './editor/cacerio/cacerio.component';
 import { CentroPobladoComponent } from './editor/centro-poblado/centro-poblado.component';
+import { UbigeoRoutingModule } from './ubigeo-routing.module';
 
 
 
@@ -16,6 +17,7 @@ import { CentroPobladoComponent } from './editor/centro-poblado/centro-poblado.c
   declarations: [ListaComponent, EditorComponent, UbigeoComponent, DepartamentoComponent, ProvinciaComponent, DistritoComponent, CacerioComponent, CentroPobladoComponent],
   imports: [
     CommonModule,
+    UbigeoRoutingModule,
     FormsModule,
     ReactiveFormsModule,
   ],

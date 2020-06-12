@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 const routes: Routes = [
+  {path:"ubigeo",loadChildren:()=>import('../ubigeo/ubigeo.module').then(m=>m.UbigeoModule)}
   
 ];
 

@@ -8,6 +8,7 @@ import { ContenedoreComponent } from '../e/contenedore/contenedore.component';
 const routes: Routes = [
   {path:"independiente",component: ContenedoreComponent},
   
+  
 ];
 
 @NgModule({

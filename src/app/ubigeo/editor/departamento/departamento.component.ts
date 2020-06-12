@@ -1,5 +1,5 @@
-import { Component, EventEmitter } from '@angular/core';
-import { NgxSubFormComponent, subformComponentProviders, Controls, NgxRootFormComponent, DataInput } from 'ngx-sub-form';
+import { Component } from '@angular/core';
+import { subformComponentProviders, Controls, NgxSubFormComponent } from 'ngx-sub-form';
 import { FormControl } from '@angular/forms';
 import { IProvincia } from '../provincia/provincia.component';
 export interface IDepartamento {
@@ -12,12 +12,9 @@ export interface IDepartamento {
   styleUrls: ['./departamento.component.css'],
   providers:subformComponentProviders(DepartamentoComponent)
 })
-export class DepartamentoComponent extends NgxRootFormComponent<IDepartamento> {
+export class DepartamentoComponent extends NgxSubFormComponent<IDepartamento> {
   
-  @DataInput()
-  dataInput: Required<IDepartamento>;
-  dataOutput: EventEmitter<IDepartamento>;
-
+  
   protected getFormControls():Controls<IDepartamento>{
     return {
       nombre_departamento: new FormControl(),
