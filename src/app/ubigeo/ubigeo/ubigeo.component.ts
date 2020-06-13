@@ -21,4 +21,5 @@ export class UbigeoComponent {
     private ubigeoService: UbigeoService,
     private route:ActivatedRoute
     ) { }
+    ubigeoDataUpdate($event){}
 }

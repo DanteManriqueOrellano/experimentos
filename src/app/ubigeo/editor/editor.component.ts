@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Input } from '@angular/core';
+import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
 import { IDepartamento } from './departamento/departamento.component';
 import { subformComponentProviders, NgxRootFormComponent, Controls, DataInput } from 'ngx-sub-form';
 import { FormControl } from '@angular/forms';
@@ -17,7 +17,8 @@ export class EditorComponent extends NgxRootFormComponent<IUbigeo> {
   @DataInput()
   @Input('ubigeosData')
   dataInput: Required<IUbigeo>;
-  dataOutput: EventEmitter<IUbigeo>;
+  @Output('ubigeoDataUpdate')
+  dataOutput: EventEmitter<IUbigeo> = new EventEmitter();
   
   protected getFormControls(): Controls<IUbigeo> {
     return {

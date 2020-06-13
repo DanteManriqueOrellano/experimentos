@@ -18,6 +18,13 @@ export class UbigeoService {
     let  ubigeoData$:BehaviorSubject<IUbigeo> = new BehaviorSubject(ubigeoData[0])
     return  ubigeoData$
  }
+ obtenDocId(){
+     return "03"
+ }
+ creaUbigeo(ubigeoData:IUbigeo){
+     console.log(ubigeoData)
+
+ }
 
  
 }

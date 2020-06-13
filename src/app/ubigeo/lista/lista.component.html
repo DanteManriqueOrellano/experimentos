@@ -1,3 +1,6 @@
+<section style="display: flex; justify-content:flex-end; align-items: center;">
+<button [routerLink]="['nuevo']">Agregar Ubigeo</button>
+</section>
 <ul>
     <li *ngFor="let ubigeo of ubigeosData$ | async">{{ubigeo.departamento.nombre_departamento}} <button [routerLink]="[ubigeo.docId,'editar']" class="edit">editar</button><button class="close">eliminar</button></li>
  </ul>
