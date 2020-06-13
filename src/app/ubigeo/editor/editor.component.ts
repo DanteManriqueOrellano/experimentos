@@ -1,9 +1,10 @@
-import { Component, OnInit, EventEmitter } from '@angular/core';
+import { Component, OnInit, EventEmitter, Input } from '@angular/core';
 import { IDepartamento } from './departamento/departamento.component';
 import { subformComponentProviders, NgxRootFormComponent, Controls, DataInput } from 'ngx-sub-form';
 import { FormControl } from '@angular/forms';
 export interface IUbigeo {
-  departamento:IDepartamento
+  departamento:IDepartamento,
+  docId:string;
 }
 
 @Component({
@@ -14,12 +15,14 @@ export interface IUbigeo {
 })
 export class EditorComponent extends NgxRootFormComponent<IUbigeo> {
   @DataInput()
+  @Input('ubigeosData')
   dataInput: Required<IUbigeo>;
   dataOutput: EventEmitter<IUbigeo>;
   
   protected getFormControls(): Controls<IUbigeo> {
     return {
-      departamento: new FormControl()
+      departamento: new FormControl(),
+      docId: new FormControl(),
     }
   }
 

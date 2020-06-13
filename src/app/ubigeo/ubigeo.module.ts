@@ -10,17 +10,16 @@ import { DistritoComponent } from './editor/distrito/distrito.component';
 import { CacerioComponent } from './editor/cacerio/cacerio.component';
 import { CentroPobladoComponent } from './editor/centro-poblado/centro-poblado.component';
 import { UbigeoRoutingModule } from './ubigeo-routing.module';
-
-
+import { SeleccionadoComponent } from './seleccionado/seleccionado.component';
 
 @NgModule({
-  declarations: [ListaComponent, EditorComponent, UbigeoComponent, DepartamentoComponent, ProvinciaComponent, DistritoComponent, CacerioComponent, CentroPobladoComponent],
+  declarations: [ListaComponent, EditorComponent, UbigeoComponent, DepartamentoComponent, ProvinciaComponent, DistritoComponent, CacerioComponent, CentroPobladoComponent, SeleccionadoComponent],
   imports: [
     CommonModule,
     UbigeoRoutingModule,
     FormsModule,
     ReactiveFormsModule,
   ],
-  exports:[ListaComponent, EditorComponent, UbigeoComponent,DepartamentoComponent]
+  exports:[ListaComponent, EditorComponent, UbigeoComponent, DepartamentoComponent, ProvinciaComponent, DistritoComponent, CacerioComponent, CentroPobladoComponent, SeleccionadoComponent]
 })
 export class UbigeoModule { }

@@ -41,22 +41,22 @@ export const dataAB:IAB=
   g:{g1:{atributoPrincipal:'comun 1'},g2:{atributoPrincipal:"comun 2"}},
   h:{h_uno:'hola',j:{j_uno:'un j'}},
   departamemnto: {
-    nombre_departamento: 'ANCASH',
+    nombre_departamento: 'puno',
     provincia: {
-      nombre_provincia: "HUARAZ",
+      nombre_provincia: "puno 01",
       distrito: {
-        nombre_distrito: "INDEPENDENCIA",
+        nombre_distrito: "puno 01 01",
         cacerios:[{
-          nombre_cacerio:"HUANCHAC",
+          nombre_cacerio:"puno 01 02 01",
           centros_poblados:[
-            {nombre_centro_poblado:"MARIAN"},
-            {nombre_centro_poblado:"CURHUAS"}
+            {nombre_centro_poblado:"puno 01 02 30"},
+            {nombre_centro_poblado:"puno 01 02 03 04"}
           ]
         },{
-          nombre_cacerio:"CAURURU",
+          nombre_cacerio:"puno 02",
           centros_poblados:[
-            {nombre_centro_poblado:"PONGOR"},
-            {nombre_centro_poblado:"PUMACAYAN"}
+            {nombre_centro_poblado:"puno 02 03"},
+            {nombre_centro_poblado:"puno 01 02"}
           ]}
         ]
       }
