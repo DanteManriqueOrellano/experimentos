@@ -6,6 +6,7 @@ import { ADosComponent } from './a-dos/a-dos.component';
 import { AUnoComponent } from './a-uno/a-uno.component';
 import { ArootComponent } from './aroot/aroot.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UbigeoModule } from '../ubigeo/ubigeo.module';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ARoutingModule,
     
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    UbigeoModule,
   ],
   exports:[AUnoComponent,ADosComponent,ArootComponent]
 })

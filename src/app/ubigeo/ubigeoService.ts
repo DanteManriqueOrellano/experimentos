@@ -9,6 +9,8 @@ import { Observable, BehaviorSubject } from 'rxjs';
 export class UbigeoService {
 
  private ubigeoData$:BehaviorSubject<IUbigeo[]> = new BehaviorSubject(ubigeoData)
+ public dataUbigeo:IUbigeo[]
+
 
  obtenUbigeos(){
      return this.ubigeoData$
@@ -34,9 +36,9 @@ export const ubigeoData: IUbigeo[] =
         {docId:"01",
             departamento: {
                 nombre_departamento: 'ANCASH',
-                provincia: {
+                provincias: [{
                     nombre_provincia: "HUARAZ",
-                    distrito: {
+                    distritos: [{
                         nombre_distrito: "INDEPENDENCIA",
                         cacerios: [{
                             nombre_cacerio: "HUANCHAC",
@@ -52,16 +54,55 @@ export const ubigeoData: IUbigeo[] =
                             ]
                         }
                         ]
-                    }
+                    }]
+                },
+                {
+                    nombre_provincia: "CARHUAZ",
+                    distritos: [{
+                        nombre_distrito: "ACOPAMPA",
+                        cacerios: [{
+                            nombre_cacerio: "COCHAPAMPA",
+                            centros_poblados: [
+                                { nombre_centro_poblado: "COCHAS" },
+                                { nombre_centro_poblado: "COLCAS" }
+                            ]
+                        }, {
+                            nombre_cacerio: "ANTARACA",
+                            centros_poblados: [
+                                { nombre_centro_poblado: "SHANUCO" },
+                                { nombre_centro_poblado: "ICHIC" }
+                            ]
+                        }
+                        ]
+                    },
+                    {
+                        nombre_distrito: "COPA CHICO",
+                        cacerios: [{
+                            nombre_cacerio: "OQUEDA",
+                            centros_poblados: [
+                                { nombre_centro_poblado: "SANTO TORIBIO" },
+                                { nombre_centro_poblado: "MOGROVEJO" }
+                            ]
+                        }, {
+                            nombre_cacerio: "SAN ILARION",
+                            centros_poblados: [
+                                { nombre_centro_poblado: "LUZURIAGA" },
+                                { nombre_centro_poblado: "MAXWELL" }
+                            ]
+                        }
+                        ]
+                    },
+                ]
                 }
+            ]
             }
         },
         {docId:"02",
             departamento: {
                 nombre_departamento: 'LA LIBERTAD',
-                provincia: {
+                provincias: [{
                     nombre_provincia: "TRUJILLO",
-                    distrito: {
+                    distritos: [{
                         nombre_distrito: "SANTA MARTA",
                         cacerios: [{
                             nombre_cacerio: "PICHUCA",
@@ -77,8 +118,8 @@ export const ubigeoData: IUbigeo[] =
                             ]
                         }
                         ]
-                    }
-                }
+                    }]
+                }]
             }
         }
 

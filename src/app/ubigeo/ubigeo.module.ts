@@ -12,15 +12,20 @@ import { CentroPobladoComponent } from './editor/centro-poblado/centro-poblado.c
 import { UbigeoRoutingModule } from './ubigeo-routing.module';
 import { SeleccionadoComponent } from './seleccionado/seleccionado.component';
 import { NuevoComponent } from './nuevo/nuevo.component';
+import {MatSelectModule} from '@angular/material/select';
+import { MatFormField, MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [ListaComponent, EditorComponent, UbigeoComponent, DepartamentoComponent, ProvinciaComponent, DistritoComponent, CacerioComponent, CentroPobladoComponent, SeleccionadoComponent, NuevoComponent],
   imports: [
     CommonModule,
     UbigeoRoutingModule,
+    MatSelectModule,
+    MatFormFieldModule,
+
     FormsModule,
     ReactiveFormsModule,
   ],
-  exports:[ListaComponent, EditorComponent, UbigeoComponent, DepartamentoComponent, ProvinciaComponent, DistritoComponent, CacerioComponent, CentroPobladoComponent, SeleccionadoComponent]
+  exports:[ListaComponent, EditorComponent, UbigeoComponent, DepartamentoComponent, ProvinciaComponent, DistritoComponent, CacerioComponent, CentroPobladoComponent, SeleccionadoComponent, NuevoComponent]
 })
 export class UbigeoModule { }

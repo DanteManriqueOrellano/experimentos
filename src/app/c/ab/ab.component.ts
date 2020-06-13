@@ -8,6 +8,7 @@ import { IF } from 'src/app/f/f/f.component';
 import { IG } from 'src/app/g/g/g.component';
 import { IH } from 'src/app/h/h/h.component';
 import { IDepartamento } from 'src/app/ubigeo/editor/departamento/departamento.component';
+import { IUbigeo_seleccionado } from 'src/app/ubigeo/seleccionado/seleccionado.component';
 
 
 export interface IAB{
@@ -17,7 +18,7 @@ export interface IAB{
   f:IF;
   g:IG;
   h:IH;
-  departamemnto:IDepartamento
+  seleccionado:IUbigeo_seleccionado;
   
 
 }
@@ -27,11 +28,11 @@ export interface IAB{
   styleUrls: ['./ab.component.css'],
   providers:subformComponentProviders(AbComponent)
 })
-export class AbComponent extends NgxRootFormComponent<IAB> {
+export class AbComponent extends NgxRootFormComponent<IUbigeo_seleccionado,IAB> {
   @DataInput()
   @Input('ab$')
-  dataInput: Required<IAB>;
-  dataOutput: EventEmitter<IAB> = new EventEmitter();
+  dataInput: Required<IUbigeo_seleccionado>;
+  dataOutput: EventEmitter<IUbigeo_seleccionado> = new EventEmitter();
   protected getFormControls(): Controls<IAB> {
     return {
       aba: new FormControl(),
@@ -40,7 +41,7 @@ export class AbComponent extends NgxRootFormComponent<IAB> {
       f: new FormControl(),
       g: new FormControl(),
       h: new FormControl(),
-      departamemnto:new FormControl()
+      seleccionado: new FormControl()
     }
   }
 }

@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { subformComponentProviders, Controls, NgxSubFormComponent } from 'ngx-sub-form';
-import { FormControl } from '@angular/forms';
+import { FormControl, FormArray } from '@angular/forms';
 import { IProvincia } from '../provincia/provincia.component';
 export interface IDepartamento {
   nombre_departamento:string;
-  provincia:IProvincia;
+  provincias:IProvincia[];
 }
 @Component({
   selector: 'app-departamento',
@@ -18,7 +18,15 @@ export class DepartamentoComponent extends NgxSubFormComponent<IDepartamento> {
   protected getFormControls():Controls<IDepartamento>{
     return {
       nombre_departamento: new FormControl(),
-      provincia: new FormControl()
+      provincias: new FormArray([])
     }
+  }
+
+  agregarProvincia(){
+    this.formGroupControls.provincias.push(new FormControl())
+  }
+  eliminarProvincia(i){
+    this.formGroupControls.provincias.removeAt(i)
+
   }
 }

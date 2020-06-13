@@ -22,7 +22,8 @@ export const dataAB:IAB=
 {
   "aba": {
     "a1": {
-      "a_uno": "valor a_uno"
+      "a_uno": "valor a_uno",
+    
     },
     "a2": {
       "a_dos": "valor a_dos"
@@ -40,36 +41,16 @@ export const dataAB:IAB=
   f:{fType:FType.DOS,f_comun:'miderda'},
   g:{g1:{atributoPrincipal:'comun 1'},g2:{atributoPrincipal:"comun 2"}},
   h:{h_uno:'hola',j:{j_uno:'un j'}},
-  departamemnto: {
-    nombre_departamento: 'puno',
-    provincia: {
-      nombre_provincia: "puno 01",
-      distrito: {
-        nombre_distrito: "puno 01 01",
-        cacerios:[{
-          nombre_cacerio:"puno 01 02 01",
-          centros_poblados:[
-            {nombre_centro_poblado:"puno 01 02 30"},
-            {nombre_centro_poblado:"puno 01 02 03 04"}
-          ]
-        },{
-          nombre_cacerio:"puno 02",
-          centros_poblados:[
-            {nombre_centro_poblado:"puno 02 03"},
-            {nombre_centro_poblado:"puno 01 02"}
-          ]}
-        ]
-      }
-    }
+  seleccionado:{departamento:'LORETO',provincia:'IQUITOS',distrito:'MALA',cacerios:['YURIMAGUAS','MAGUAS'],centros_poblados:['PATACA','ALGOMAS']}
 
-  }
-  
   
 }
 
 export const dataIA:IA = {
   "a1": {
-    "a_uno": "fast"
+    "a_uno": "fast",
+  // seleccionado:{departamento:'LORETO',provincia:'IQUITOS',distrito:'MALA',cacerios:['YURIMAGUAS','MAGUAS'],centros_poblados:['PATACA','ALGOMAS']}
+
   },
   "a2": {
     "a_dos": "foot"

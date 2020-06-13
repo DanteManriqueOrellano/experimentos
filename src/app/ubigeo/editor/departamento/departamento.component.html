@@ -2,6 +2,10 @@
     <fieldset>
         <legend>DEPARTAMENTO</legend>
         <input [formControlName]="formControlNames.nombre_departamento">
-        <app-provincia [formControlName]="formControlNames.provincia"></app-provincia>
+        <div [formArrayName]="formControlNames.provincias" *ngFor="let unaProvincia of formGroupControls.provincias.controls; let i = index">
+            <app-provincia [formControl]="unaProvincia"></app-provincia>
+            <button (click)="eliminarProvincia(i)">Eliminar Provincia</button>
+        </div>
+        <button (click)="agregarProvincia()">Agregar Provincia</button>
     </fieldset>
 </section>
