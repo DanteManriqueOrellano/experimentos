@@ -37,7 +37,7 @@ export class SeleccionadoComponent extends NgxSubFormComponent<IUbigeo_seleccion
   public dataCaserio:ICacerio[];
   public dataCp:ICentroPoblado[];
   public selectedValue:string[]
-  public dataUbigeo:IUbigeo[] = this.ubigeoService.dataUbigeo
+  
 
   
  

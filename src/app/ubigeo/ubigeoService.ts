@@ -1,30 +1,42 @@
 import { Injectable } from '@angular/core';
-import { IDepartamento } from './editor/departamento/departamento.component';
+import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { IUbigeo } from './editor/editor.component';
 import { Observable, BehaviorSubject } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UbigeoService {
 
- private ubigeoData$:BehaviorSubject<IUbigeo[]> = new BehaviorSubject(ubigeoData)
- public dataUbigeo:IUbigeo[]
+ private ubigeosData$:Observable<IUbigeo[]>;
+ private ubigeoCollection:AngularFirestoreCollection<IUbigeo>;
+ private ubigeoDocument:AngularFirestoreDocument<IUbigeo>;
 
-
+ constructor(private readonly afs: AngularFirestore){
+    this.ubigeoCollection = this.afs.collection<IUbigeo>('ubigeos');
+    this.ubigeosData$ = this.ubigeoCollection.snapshotChanges().pipe(
+        map(actions => actions.map(a => {
+          const data = a.payload.doc.data() as IUbigeo;
+          const docId = a.payload.doc.id;
+          return { docId, ...data };
+        }))
+      );
+ }
+ 
  obtenUbigeos(){
-     return this.ubigeoData$
+     return this.ubigeosData$
  }
  obtenUnUbigeoPorDocId(docId: string){
-     console.log(docId)
-    let  ubigeoData$:BehaviorSubject<IUbigeo> = new BehaviorSubject(ubigeoData[0])
-    return  ubigeoData$
- }
+     this.ubigeoDocument = this.afs.collection('ubigeos').doc(docId);
+     return this.ubigeoDocument.snapshotChanges();
+}
  obtenDocId(){
-     return "03"
+     return this.afs.createId;
  }
  creaUbigeo(ubigeoData:IUbigeo){
-     console.log(ubigeoData)
+    this.ubigeoCollection.doc(ubigeoData.docId).set(ubigeoData.departamento) 
+    
 
  }
 
