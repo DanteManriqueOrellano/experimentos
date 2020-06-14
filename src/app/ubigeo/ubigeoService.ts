@@ -24,7 +24,7 @@ export class UbigeoService {
       );
  }
  
- obtenUbigeos(){
+ obtenUbigeos():Observable<IUbigeo[]>{
      return this.ubigeosData$
  }
  obtenUnUbigeoPorDocId(docId: string){
@@ -35,10 +35,21 @@ export class UbigeoService {
      return this.afs.createId();
  }
  creaUbigeo(ubigeoData:IUbigeo){
-    
-    
-        this.ubigeoCollection.doc(ubigeoData.docId).set(ubigeoData)
-    
+     let ubigeos = this.obtenUbigeos()
+     ubigeos.subscribe((val)=>{
+
+     })
+     this.ubigeoCollection.doc(ubigeoData.docId).set(ubigeoData)
+ }
+ actualizaUbigeo(ubigeoData:IUbigeo){    
+    this.afs.collection("ubigeos").doc(ubigeoData.docId).update(ubigeoData);
+ }
+ eliminaUbigeo(ubigeoDataId:string){
+    this.afs.collection("ubigeos").doc(ubigeoDataId).delete().then(function() {
+        console.log("Document successfully deleted!");
+    }).catch(function(error) {
+        console.error("Error removing document: ", error);
+    });
  }
 }
 

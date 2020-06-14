@@ -2,7 +2,7 @@
 <button [routerLink]="['nuevo']">Agregar Ubigeo</button>
 </section>
 <ul>
-    <li *ngFor="let ubigeo of ubigeosData$ | async">{{ubigeo.departamento.nombre_departamento}} <button [routerLink]="[ubigeo.docId,'editar']" class="edit">editar</button><button class="close">eliminar</button></li>
+    <li *ngFor="let ubigeo of ubigeosData$ | async">{{ubigeo.departamento.nombre_departamento}} <button [routerLink]="[ubigeo.docId,'editar']" class="edit">editar</button><button (click)="eliminarUbigeo(ubigeo.docId)" class="close">eliminar</button></li>
  </ul>
  <router-outlet></router-outlet>
  

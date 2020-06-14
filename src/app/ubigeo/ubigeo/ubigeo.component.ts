@@ -21,7 +21,9 @@ export class UbigeoComponent {
     private ubigeoService: UbigeoService,
     private route:ActivatedRoute
     ) { }
-    ubigeoDataUpdate($event){
-      console.log($event)
+    
+    ubigeoDataUpdate(ubigeoData:IUbigeo){
+      
+      this.ubigeoService.actualizaUbigeo(ubigeoData)
     }
 }

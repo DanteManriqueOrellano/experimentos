@@ -13,5 +13,10 @@ export class ListaComponent   {
 
   constructor(private ubigeoService: UbigeoService) { }
 
+  eliminarUbigeo(id){
+    this.ubigeoService.eliminaUbigeo(id);
+
+  }
+
  
 }

@@ -13,6 +13,7 @@ export class NuevoComponent {
   ubigeosData$:Observable<IUbigeo>
 
   constructor(private ubigeoService: UbigeoService){}
+  
   ubigeoDataUpdate($event:IUbigeo){
     $event.docId = this.ubigeoService.obtenDocId()
     this.ubigeoService.creaUbigeo($event)
