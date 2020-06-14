@@ -54,8 +54,9 @@ export class SeleccionadoComponent extends NgxSubFormComponent<IUbigeo_seleccion
   }
   setIndiceDepartamento(depId){
     this.depId = depId
-    
-    this.departamentos$.subscribe((val)=>{ this.dataProvincias = val[this.depId].departamento.provincias})
+    this.departamentos$.subscribe((val)=>{
+      this.dataProvincias = val[this.depId].departamento.provincias
+    })
   }
   setIndiceProvincia(proId){
     this.proId=proId

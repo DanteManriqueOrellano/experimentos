@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, ɵConsole } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { IUbigeo } from './editor/editor.component';
 import { Observable, BehaviorSubject } from 'rxjs';
@@ -29,26 +29,28 @@ export class UbigeoService {
  }
  obtenUnUbigeoPorDocId(docId: string){
      this.ubigeoDocument = this.afs.collection('ubigeos').doc(docId);
-     return this.ubigeoDocument.snapshotChanges();
+     return this.ubigeoDocument.valueChanges();
 }
  obtenDocId(){
-     return this.afs.createId;
+     return this.afs.createId();
  }
  creaUbigeo(ubigeoData:IUbigeo){
-    this.ubigeoCollection.doc(ubigeoData.docId).set(ubigeoData.departamento) 
     
-
+    
+        this.ubigeoCollection.doc(ubigeoData.docId).set(ubigeoData)
+    
  }
-
- 
 }
 
-export const ubigeoData: IUbigeo[] = 
+/*export const ubigeoData: IUbigeo[] =
     [
-        {docId:"01",
+        {
+            docId: "01",
             departamento: {
                 nombre_departamento: 'ANCASH',
-                provincias: [{
+                
+                provincias: [
+                {
                     nombre_provincia: "HUARAZ",
                     distritos: [{
                         nombre_distrito: "INDEPENDENCIA",
@@ -68,6 +70,7 @@ export const ubigeoData: IUbigeo[] =
                         ]
                     }]
                 },
+
                 {
                     nombre_provincia: "CARHUAZ",
                     distritos: [{
@@ -104,12 +107,13 @@ export const ubigeoData: IUbigeo[] =
                         }
                         ]
                     },
-                ]
+                    ]
                 }
-            ]
+                ]
             }
         },
-        {docId:"02",
+        {
+            docId: "02",
             departamento: {
                 nombre_departamento: 'LA LIBERTAD',
                 provincias: [{
@@ -135,4 +139,4 @@ export const ubigeoData: IUbigeo[] =
             }
         }
 
-    ]
+    ]*/

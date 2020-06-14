@@ -1,7 +1,7 @@
 import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
 import { IDepartamento } from './departamento/departamento.component';
 import { subformComponentProviders, NgxRootFormComponent, Controls, DataInput } from 'ngx-sub-form';
-import { FormControl } from '@angular/forms';
+import { FormControl, FormArray } from '@angular/forms';
 export interface IUbigeo {
   departamento:IDepartamento,
   docId:string;
@@ -26,6 +26,4 @@ export class EditorComponent extends NgxRootFormComponent<IUbigeo> {
       docId: new FormControl(),
     }
   }
-
-
 }
